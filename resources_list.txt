@@ -1,0 +1,17 @@
+get_/api/v1/_/metadata
+get_/api/v1/_/metadata/vendor
+get_/api/v1/me
+put_/api/v1/users/_int:user_id_/profiles/member
+get_/api/v1/users/_int:user_id_/health_profile
+put_/api/v1/users/_int:user_id_/health_profile
+post_/api/v1/_/agreeements
+get_/api/v1/features
+post_/api/v1/users/_int:user_id_/organizations
+get_/api/v1/tracks
+get_/api/v1/users/_int:user_id_/assessments
+get_/api/v1/users/_int:user_id_/assessment_answers
+put_/api/v1/users/_int:user_id_/assessments/_int:needs_assessment_id
+get_/api/v1/users/_int:user_id_/care_team
+get_/api/v1/channels
+get_/api/v1/categories
+get_/api/v1/_/geography

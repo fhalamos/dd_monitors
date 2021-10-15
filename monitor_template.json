@@ -1,0 +1,33 @@
+{
+	"name": "Resource <resource> has a high p90 latency on env:production",
+	"type": "metric alert",
+	"query": "avg(last_10m):avg:trace.flask.request{env:production,resource_name:<resource>,service:api} > 5",
+	"message": "The API endpoint {{resource_name.name}} has an avg p90 latency of {{value}} in the last 10 minutes. @slack-parti-alerts",
+	"tags": [
+		"service:api",
+		"env:production",
+		"resource_name: <resource>",
+		"team:parti-pod"
+	],
+	"options": {
+		"notify_audit": false,
+		"locked": false,
+		"timeout_h": 0,
+		"silenced": {},
+		"include_tags": true,
+		"no_data_timeframe": null,
+		"require_full_window": false,
+		"new_host_delay": 300,
+		"notify_no_data": false,
+		"renotify_interval": 0,
+		"escalation_message": "",
+		"renotify_occurrences": null,
+		"renotify_statuses": null,
+		"thresholds": {
+			"critical": 5,
+			"warning": 4
+		}
+	},
+	"priority": null,
+	"classification": "apm"
+}
